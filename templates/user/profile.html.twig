@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+{% block title %}Profile {{ app.user.pseudo }}{% endblock %}
+
+{% block body %}
+
+<div class="container text-center"><br><br>
+    <div class="col-12 mb-4">
+        <h1>{{ app.user.pseudo }} Profile</h1>
+    </div><br><br>
+    <div class="">
+        {% if user.avatar %}
+                <img class="profile" src="{{ asset('assets/avatars/img_profile/' ~ user.avatar) }}" alt="Image" height="100"width="100">
+        {% else %}
+                <img class="profile" src="{{ asset('assets/avatars/default.jpg') }}" alt="Image" height="100"width="100">
+        {% endif %}
+        <br>
+        {% if user.tricks | length > 0 %}
+        <a href="{{ path('app_get_trick') }}"><span class="badge badge-success badge-shadw">{{user.tricks | length}} Tricks published</span></a>
+        {% else %}
+        <span class="badge badge-warning">You have no trick published</span>
+        {% endif %}
+        <br>
+        {% if user.comments | length > 0 %}
+        <a href="{{ path('app_get_comment') }}"><span class="badge badge-success badge-shadw">{{user.comments | length}} comments published</span></a>
+        {% else %}
+        <span class="badge badge-primary">You have no comments published</span>
+        {% endif %}
+    </div><br><br>
+    <div class="card">
+        <div class="card-header"><br>Pseudo : {{ app.user.pseudo }}<br><br></div>
+        <div class="card-content"><br>Mail : {{ app.user.mail }}<br><br></div>
+        <div class="card-footer"><br>
+            <a class="btn-roun-shadow btn btn-primary" href="{{path('app_edit_profile')}}">Edit {{ app.user.pseudo }} profile</a><br><br>
+        </div>
+    </div><br><br><br><br><br><br>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+{% for message in app.flashes('message') %}
+<div class="alert alert-success text-center" role="alert">
+    {{ message }}
+</div>
+{% endfor %}
+<div>
+    {% include 'trick/trickslisttricks.html.twig' %}
+</div><br>
+{% if app.user %}
+<div class= "d-flex justify-content-center">
+
+<a class="btn-roun-shadow btn-rounded btn btn-secondary text-white nav-link shadow" href="{{ path('trick_new') }}">Create new Trick !</a>
+</div><br><br><br>
+{% endif %}
+{% endblock %}
+

@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Forgot Password{% endblock %}
+
+{% block body %}<br><br><br>
+<h1 class="text-center my-5">Forgot your password</h1><br>
+<div class="container my-5 text-center">
+    <div class="border py-5 px-5">
+        {{ form_start(emailForm)}}
+        {{ form_widget(emailForm) }}
+        <button type="submit" class="btn-roun-shadow btn btn-primary">Send !</button>
+        {{ form_end(emailForm) }}
+    </div><br>
+    <br><br><br><br><br><br><br><br>
+</div>
+{% endblock %}
