@@ -1,6 +1,7 @@
 {% extends 'base.html.twig' %}
 {% block title %}Trick{% endblock %}
 {% block body %}
+<meta name="robots" content="noindex">
 {% for message in app.flashes('message') %}
 <div class="alert alert-success text-center" role="alert">
     {{ message }}
