@@ -2,12 +2,12 @@
 {% block title %}Trick-user{% endblock %}
 {% block body %}
 <meta name="robots" content="noindex">
-<div class="margout row">
+<div class="margout row justify-content-center">
     <div class="col-12 mb-4"><br><br>
         <h1 class="title text-center">Tricks de {{user.pseudo}}</h1><br><br>
     </div>
     {% for trick in user.tricks %}
-        <div class="col-lg-2 col-sm-12 col-md-6 my-3 m-4  ">
+        <div class="col-xl-2 col-lg-4 col-sm-12 col-md-12 my-3 m-4">
             <div class="card shadow">
                 <a href="{{ path('comment_new', {'slug': trick.slug}) }}">
                 <div class="col-12 p-2" >

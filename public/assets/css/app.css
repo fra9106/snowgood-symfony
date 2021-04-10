@@ -178,6 +178,8 @@ body.modal {
   background-color: rgba(33, 37, 41, 0.5);
   line-height: 3.1rem;
   border-radius: 10%;
+  margin-left: 225px;
+  z-index: 5;
 }
 
 .profile {
@@ -299,10 +301,20 @@ button.js-modal-close {
   }
 }
 
+@media (min-width:700px) {
+  .scroll-to-up a {
+    margin-left: 650px;
+  }
+}
+
 @media (min-width: 992px) {
   .image-trick {
     width: 900px;
     height: 450px;
+  }
+
+  .scroll-to-up a {
+    margin-left: 250px;
   }
 
   .hook-text {
@@ -353,6 +365,12 @@ button.js-modal-close {
 
   .bt-edit-poster {
     display: block !important;
+  }
+
+  @media (min-width: 1200px) {
+    .scroll-to-up a {
+      margin-left: -35px;
+    }
   }
 
 }

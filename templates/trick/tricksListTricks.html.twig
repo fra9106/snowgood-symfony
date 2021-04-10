@@ -1,5 +1,5 @@
 <meta name="robots" content="noindex">
-<div class=" margout row mt-3">
+<div class=" margout row mt-3 justify-content-center">
     <div class="col-12 mb-4"><br><br><br><br>
         <h1 class="title text-center">Your tricks</h1><br><br><br><br>
     </div>
@@ -9,7 +9,7 @@
     </div>
     {% endfor %}
     {% for trick in tricks %}
-    <div class="col-lg-2 col-sm-12 col-md-4 my-3 m-4 tricks-more ">
+    <div class="col-xl-2 col-lg-4 col-sm-12 col-md-12 my-3 m-4 tricks-more ">
         <div class="w-100 mx-auto p-2 row rounded bg-white shadow mw-100 overflow-hidden ">
             {% if app.user %}
             <a href="{{ path('comment_new', {'slug': trick.slug}) }}">
