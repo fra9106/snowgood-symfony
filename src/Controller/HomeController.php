@@ -17,16 +17,6 @@ class HomeController extends AbstractController
         return $this->render('home/home.html.twig', [
             'tricks' => $repo->findAllTricks()
             ]);
-        
-    }
-
-    /**
-     * @Route("mentionsLegales", name="mentions_legales")
-     * @return Response
-     */
-    public function mentionsLegales(): Response 
-    {
-        return $this->render('shared/mentions-legales.html.twig');
     }
     
 }
